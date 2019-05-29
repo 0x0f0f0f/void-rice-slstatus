@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 2000;
+const unsigned int interval = 4000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "\ue0f7";
@@ -61,16 +61,16 @@ static const char unknown_str[] = "\ue0f7";
  */
 static const struct arg args[] = {
     /* function     format          				argument */
-    { netspeed_tx,	"\x01\ue060%6s ",				"wlan0"},
-    { netspeed_rx,	"\ue061%6s ",					"wlan0"},
+//    { netspeed_tx,	"\x01\ue060%6s ",				"wlan0"},
+//    { netspeed_rx,	"\ue061%6s ",					"wlan0"},
     { disk_used,	"\x09\ue02b%s ",				"/" },
-    { wifi_essid,	"\x01\ue219%s ",				"wlan0"},
-    { wifi_perc,	"%s%% ",					 "wlan0"},
-    { ipv4,		"%s ",						"wlan0"},
-    { battery_perc, 	"\x09\ue1ff%3s%% \x01",         		"BAT0" },
+//    { wifi_essid,	"\x01\ue219%s ",				"wlan0"},
+    { wifi_perc,	"\x01\ue219%s%% ",				"wlan0"},
+//    { ipv4,		"%s ",						"wlan0"},
+//    { battery_perc, 	"\x09\ue1ff%3s%% \x01",         		"BAT0" },
     { cpu_perc,		"\x01\ue1c0%3s%% ",				NULL},
-    { cpu_freq,		"%6shz ", 					NULL},
+//    { cpu_freq,		"%6shz ", 					NULL},
     { ram_used,		"\x09\ue028%7s ", 				NULL},
-    { datetime,     	"\x01\ue1cd%s | ",		        	"%F" },
+//    { datetime,     	"\x01\ue1cd%s | ",		        	"%F" },
     { datetime,     	"\ue016%s ",	  	            		"%T" },
 };
